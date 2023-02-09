@@ -1,0 +1,4 @@
+az login
+./terraform.exe init
+./terraform.exe apply -auto-approve
+./setup_env.ps1
