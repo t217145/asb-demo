@@ -18,6 +18,6 @@
 4. After execute success, export those variable on screen
 `./setup_env.ps1`
 
-![Deployment success](/asb-demo/Stream/asb-demo-terraform/images/deployed.PNG?raw=true "Deployment success")
+![Deployment success](/Stream/asb-demo-terraform/images/deployed.PNG?raw=true "Deployment success")
 
 5. Set the corresponding variable in WebApps Application variables or setup in local environment
