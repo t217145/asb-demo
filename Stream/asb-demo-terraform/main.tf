@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "3.9.0"
     }
+    /* azurecaf = {
+      source  = "aztfmod/azurecaf"
+      version = "1.2.16"
+    }     */
   }
 }
 
@@ -13,8 +17,15 @@ provider "azurerm" {
 
 data "azurerm_subscription" "current" { }
 
+/* resource "azurecaf_name" "resource_group" {
+  name          = var.application_name
+  resource_type = "azurerm_resource_group"
+  random_length = 5
+  clean_input   = true
+} */
+
 resource "azurerm_resource_group" "main" {
-  name     = var.resource_group_name
+  name     = var.resource_group_name #azurecaf_name.resource_group.result
   location = var.location
 
   tags = {
@@ -23,8 +34,15 @@ resource "azurerm_resource_group" "main" {
   }
 }
 
+/* resource "azurecaf_name" "azurecaf_name_servicebus" {
+  name          = var.application_name
+  resource_type = "azurerm_servicebus_namespace"
+  random_length = 5
+  clean_input   = true
+} */
+
 resource "azurerm_servicebus_namespace" "servicebus_namespace" {
-  name                = var.asb_ns_name
+  name                = var.asb_ns_name #azurecaf_name.azurecaf_name_servicebus.result
   location            = var.location
   resource_group_name = azurerm_resource_group.main.name
 
