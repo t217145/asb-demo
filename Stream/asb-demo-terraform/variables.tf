@@ -31,7 +31,7 @@ variable "principal_id" {
 variable "asb_ns_name" {
   type        = string
   description = "The name of Azure Service Bus Namespace."
-  default     = "mfc-asb-demo"
+  default     = "mfc-ess-demo"
 }
 
 variable "topic_name" {
@@ -43,7 +43,7 @@ variable "topic_name" {
 variable "topic_size" {
   type        = number
   description = "The topic size in Metabyte."
-  default     = 2048
+  default     = 1024
 }
 
 variable "subscription_name" {

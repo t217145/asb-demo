@@ -17,7 +17,7 @@
 		<java.version>17</java.version>
 		<spring-cloud-azure.version>5.0.0</spring-cloud-azure.version>
 	</properties>
-		<dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>com.azure.spring</groupId>
 			<artifactId>spring-cloud-azure-starter</artifactId>
